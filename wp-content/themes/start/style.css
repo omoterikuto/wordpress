@@ -13,11 +13,15 @@ version： 1.0.0
 body {
   margin: 0px;
   color: #555;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Haettenschweiler', sans-serif;
+}
+
+.top-contents {
+  margin-top: 30px;
 }
 
 .contents {
-  background-color: rgba(245, 245, 245, 1.0);
+  margin-top: 100px;
 }
 
 ul {
@@ -48,24 +52,23 @@ a {
 }
 
 .head-bar {
-  background-color: #333;
+  background-color: #fff;
   position: fixed;
   top: 0px;
   width: 100%;
   height: 52px;
   z-index: 20;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo h4 {
   display: inline-block;
-  color: white;
-  margin: 0px;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  border-left: 3px solid white;
+  color: #333;
+  margin: 15px;
+  border-left: 3px solid #333;
   line-height: 20px;
-  padding: 0px 0px 2px 8px;
+  padding: 0px 3px;
 }
 
 .head-bar-contents {
@@ -73,10 +76,12 @@ a {
 }
 
 #hamburger-menu {
-  background: #333;
+  background: #fff;
   transition: 0.4s;
-  color: white;
+  color: #333;
   padding-top: 52px;
+  position: absolute;
+  width: 100%;
 }
 
 #hamburger-menu ul {
@@ -105,7 +110,7 @@ a {
 #toggle span {
   display: block;
   width: 28px;
-  border-bottom: solid 3px white;
+  border-bottom: solid 3px #333;
   -webkit-transition: .25s ease-in-out;
   /*変化の速度を指定*/
   -moz-transition: .25s ease-in-out;
@@ -151,10 +156,13 @@ a {
   transform: rotate(-45deg);
 }
 
+#header-menu {
+  margin-right: 30px;
+}
+
 #header-menu ul {
-  background-color: #333;
-  color: white;
-  font-size: 12px;
+  color: #333;
+  font-size: 10px;
   height: 43px;
   list-style: none;
   margin: 0px;
@@ -169,20 +177,19 @@ a {
 }
 
 #header-menu .menu-item>a {
-  border-right: 1px solid rgba(245, 245, 245, 1.0);
-  padding: 15px 40px;
+  border-right: 2px solid #777;
+  padding: 7px 20px;
   margin: 0px;
 }
 
 #header-menu .menu-item>a:hover {
-  color: #333;
-  background-color: rgba(245, 245, 245, 1.0);
-  transition: 0.3s;
-  padding: 15px 50px;
+  color: #fff;
+  background-color: #777;
+  transition: 0.2s;
 }
 
 #header-menu .menu-item:first-child>a {
-  border-left: 1px solid rgba(245, 245, 245, 1.0);
+  border-left: 2px solid #777;
 }
 
 .none {
@@ -194,25 +201,25 @@ a {
 }
 
 .site-branding {
-  background: url(img/header3.jpg);
-  background-position: top;
+  background: url(img/top.jpg);
+  background-position: center;
   background-attachment: fixed;
-  background-size: contain;
-  height: 170px;
+  background-size: cover;
+  height: 400px;
   display: flex;
   align-items: center;
-  text-align: center;
-  border-bottom: 1px solid #666;
+  margin-top: 50px;
 }
 
 .site-branding h1 {
+  text-shadow: 0 0 7px rgba(0, 0, 0, .4);
   width: 100%;
-  color: #333;
+  color: #fff;
   font-weight: 100;
-  background: rgba(255, 255, 255, 0.8);
   font-family: 'Roboto', sans-serif;
-  padding: 8px 0px;
-  box-shadow: 0px 0px 10px white;
+  font-weight: bolder;
+  padding: 8px 30px;
+  text-align: right;
 }
 
 
@@ -245,6 +252,7 @@ a {
   border-radius: 10px;
   padding: 8px 20px 8px 16px;
   font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .page-header h2 {
@@ -367,9 +375,7 @@ a {
 }
 
 .s-post {
-  background: white;
   padding: 20px;
-  box-shadow: 0px 0px 10px #DDD;
   margin-bottom: 10px;
 }
 
@@ -602,9 +608,6 @@ footer {
 }
 
 @media screen and (min-width:481px) {
-  .site-branding {
-    height: 220px;
-  }
   .pickup-item {
     height: 130px;
   }
@@ -664,16 +667,15 @@ footer {
     display: -webkit-flex;
   }
   #header-menu ul {
-    font-size: 16px;
+    font-size: 12px;
     height: 54px;
   }
   .site-branding {
-    height: 300px;
+    height: 500px;
     border: none;
   }
   .site-branding h1 {
-    padding: 12px 0px;
-    box-shadow: 0px 0px 10px white;
+    padding: 0 40px;
     font-size: 40px;
   }
   #posts .post,
@@ -722,6 +724,7 @@ footer {
     padding: 20px 20px 20px 0px;
     box-sizing: border-box;
   }
+  .top-contents,
   .contents {
     display: flex;
     justify-content: center;
