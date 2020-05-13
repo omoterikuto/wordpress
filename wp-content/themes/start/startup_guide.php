@@ -1,23 +1,20 @@
-<?php
-
-/**
- *Template Name: startup_guide
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 <div class="contents">
-
   <main id="main">
+    <?php get_template_part('pickup'); ?>
     <div id="primary" class="content-area">
       <div class="page-header">
         <h2>最新記事</h2>
       </div>
       <div id="posts">
-
         <?php
-        if (have_posts()) :
-          while (have_posts()) :
-            the_post();
+        $wp_query = new WP_Query();
+        $my_posts = array(
+          'post_type' => 'post',
+          'posts_per_page' => '6',
+        );
+        $wp_query->query($my_posts);
+        if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
         ?>
             <div class="post">
               <div class="post-title">
@@ -41,11 +38,9 @@ get_header(); ?>
                 </a>
               </div>
             </div>
-          <?php endwhile;
-        else : ?>
-          <p>投稿記事はありません</p>
-
-        <?php endif; ?>
+        <?php endwhile;
+        endif; ?>
+        <?php wp_reset_postdata(); ?>
       </div>
       <?php if (function_exists('wp_pagenavi')) {
         wp_pagenavi();

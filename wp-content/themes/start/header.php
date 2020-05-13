@@ -25,7 +25,7 @@
     <div class="head-bar">
       <div class="head-bar-contents">
         <div class="logo">
-          <h4>StartUp</h4>
+          <h4><a href="<?= home_url($path, $scheme); ?>">StartUp</a></h4>
         </div>
         <div id="hamburger-menu" class="none">
           <?php wp_nav_menu(array('theme_location' => 'global')); ?>
