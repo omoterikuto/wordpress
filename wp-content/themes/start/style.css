@@ -12,8 +12,8 @@ version： 1.0.0
 
 body {
   margin: 0px;
-  color: #555;
-  font-family: 'Haettenschweiler', sans-serif;
+  color: #333;
+  font-family: "メイリオ", Meiryo, "Yu Gothic", YuGothic, sans-serif;
 }
 
 .top-contents {
@@ -39,7 +39,8 @@ h3 {
 }
 
 #main {
-  padding: 4% 8%;
+  width: calc(100% - 60px);
+  margin: 0 auto;
 }
 
 .sidebar {
@@ -52,8 +53,8 @@ a {
 }
 
 .head-bar {
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(23px);
   box-shadow: 0 0 6px #999;
   position: fixed;
   top: 0px;
@@ -68,6 +69,7 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-size: 18px;
 }
 
 .logo h4 {
@@ -235,25 +237,6 @@ a {
 }
 
 
-/* pickup */
-
-.pickup {
-  margin-bottom: 15px;
-}
-
-.pickup-item {
-  height: 110px;
-  margin-bottom: 10px;
-  background-color: white;
-  box-shadow: 0px 0px 8px #DDD;
-  font-size: 12px;
-  display: -moz-flex;
-  display: -webkit-flex;
-  justify-content: flex-end;
-  flex-direction: row-reverse;
-}
-
-
 /* index.php */
 
 .page-header {
@@ -265,7 +248,7 @@ a {
 }
 
 .page-header h2 {
-  border-left: 4px solid rgb(220, 205, 50);
+  border-left: 4px solid rgb(119, 176, 217);
   padding: 0px 0px 2px 12px;
   margin: 0px;
 }
@@ -283,42 +266,32 @@ a {
   border-bottom: 1px solid #555;
 }
 
-#posts .post-container {
+#posts .post {
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #aaa;
-}
-
-#posts .post {
   position: relative;
-  height: 130px;
-  background-color: rgba(0, 0, 0, .05);
+  height: 360px;
   font-size: 12px;
-  display: -moz-flex;
-  display: -webkit-flex;
-  justify-content: flex-end;
-  flex-direction: row-reverse;
 }
 
-.post-image,
-.pickup-post-img {
-  width: 340px;
+.post-image {
   padding: 0px;
   display: inline-block;
+  width: 100%;
 }
 
-.post-image img,
-.pickup-post-img img {
-  height: 100%;
+.post-image img {
+  object-fit: contain;
+  height: 200px;
   width: 100%;
   object-fit: cover;
   vertical-align: bottom;
 }
 
-.post-title h3,
-.pickup-post-title h3 {
-  font-weight: lighter;
+.post-title h3 {
   font-size: 16px;
+  font-weight: bolder;
 }
 
 .post-title {
@@ -333,10 +306,9 @@ a {
 
 .post-meta {
   font-size: 10px;
-  margin: 10px 0px;
+  margin: 5px 0px;
   display: flex;
   justify-content: flex-end;
-  color: #999;
   word-break: keep-all;
 }
 
@@ -383,9 +355,11 @@ a {
 }
 
 .s-post-title {
+  letter-spacing: 1.5px;
   position: absolute;
-  bottom: 0px;
-  background-color: rgba(255, 255, 255, 0.8);
+  bottom: 40px;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.4);
   width: 100%;
   text-align: center;
   box-sizing: border-box;
@@ -414,8 +388,8 @@ a {
   display: inline-block;
   font-size: 18px;
   margin: 0px 0px 20px 0px;
-  border-bottom: 2px solid rgba(50, 140, 200, 0.7);
-  padding-bottom: 2px;
+  border-left: 3px solid rgb(250, 119, 119);
+  padding-left: 7px;
 }
 
 .sidebar p {
@@ -423,10 +397,10 @@ a {
 }
 
 .widget {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.05);
   padding: 20px;
   margin-bottom: 15px;
-  box-shadow: 0px 0px 10px #DDD;
+  box-shadow: 0px 0px 10px #ccc;
 }
 
 .widget:last-child {
@@ -626,32 +600,20 @@ footer {
 }
 
 @media screen and (min-width:481px) {
-  .pickup-item {
-    height: 130px;
+  #main {
+    width: 440px;
+    margin: 0 auto;
   }
   #posts .post {
-    height: 160px;
-    display: -moz-flex;
-    display: -webkit-flex;
-    justify-content: flex-end;
-    flex-direction: row-reverse;
-  }
-  .post-image,
-  .pickup-item-img {
-    width: 440px;
-    padding: 0px;
+    height: 400px;
   }
   .post-image img {
-    height: 100%;
-  }
-  .pickup-post-title {
-    padding: 20px 30px;
+    height: 240px;
   }
   .post-title {
     padding: 16px 20px;
   }
-  .post-title h3,
-  .pickup-post-title h3 {
+  .post-title h3 {
     font-size: 18px;
   }
   .searchform {
@@ -671,6 +633,7 @@ footer {
     width: 580px;
     box-sizing: border-box;
     padding: 20px 20px 20px 20px;
+    margin: 0;
   }
   #s-main {
     padding: 20px;
@@ -695,8 +658,17 @@ footer {
     padding: 0 40px;
     font-size: 40px;
   }
-  .pickup-item {
-    margin-bottom: 15px;
+  #posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #posts .post {
+    width: 258px;
+    height: 360px;
+  }
+  .post-image img {
+    height: 170px;
   }
   .page-header {
     padding: 12px 30px 12px 16px;
@@ -707,27 +679,11 @@ footer {
     padding: 0px 0px 3px 12px;
     margin: 0px;
   }
-  .s-post-title {
-    position: static;
-    background-color: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-  }
   .s-post-title>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 150px;
-    box-shadow: 1px 3px 6px #CCC;
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    padding: 0px 20px;
-    margin-left: 20px;
-  }
-  .s-post .post-header {
-    display: flex;
+    height: 100px;
   }
   .s-post .post-meta {
     margin-bottom: 0;
@@ -736,7 +692,7 @@ footer {
     vertical-align: bottom;
   }
   .sidebar {
-    width: 230px;
+    width: 300px;
     padding: 20px 20px 20px 0px;
     box-sizing: border-box;
   }
@@ -771,34 +727,24 @@ footer {
   }
 }
 
-@media screen and (min-width:1125px) {
+@media screen and (min-width:1200px) {
   #main {
     width: 900px;
   }
-  .pickup {
-    display: flex;
-    justify-content: space-between;
-  }
-  .pickup-item {
-    width: 280px;
-  }
-  .pickup-post-title h3 {
-    font-size: 14px;
-  }
-  .pickup-post-title {
-    padding: 20px 16px;
-  }
-  #posts {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  #s-main {
+    padding: 20px;
+    width: 900px;
   }
   #posts .post {
-    width: 422px;
-    height: 160px;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  .post-image img {
+    height: 240px;
   }
   .s-post-title>div {
-    height: 200px;
     margin: 0px 20px 0px 40px;
   }
   .s-post-title h3 {
@@ -808,9 +754,6 @@ footer {
     font-size: 18px;
   }
   .post:nth-child(2n) {
-    margin-left: 15px;
-  }
-  .post-image {
-    width: 420px;
+    margin-left: 20px;
   }
 }

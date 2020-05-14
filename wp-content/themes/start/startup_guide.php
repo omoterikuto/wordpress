@@ -16,7 +16,17 @@
         $wp_query->query($my_posts);
         if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
         ?>
+
             <div class="post">
+              <div class="post-image">
+                <a href="<?php the_permalink(); ?>">
+                  <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail(); ?>
+                  <?php else : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimg.jpg">
+                  <?php endif; ?>
+                </a>
+              </div>
               <div class="post-title">
                 <h3>
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -27,17 +37,13 @@
                     <?php the_category(' '); ?>
                   </div>
                 </div>
-              </div>
-              <div class="post-image">
-                <a href="<?php the_permalink(); ?>">
-                  <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail(); ?>
-                  <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimg.jpg">
-                  <?php endif; ?>
-                </a>
+                <div class="excerpt">
+                  <?php echo mb_substr(get_the_excerpt(), 0, 80) . '...'; ?>
+
+                </div>
               </div>
             </div>
+
         <?php endwhile;
         endif; ?>
         <?php wp_reset_postdata(); ?>

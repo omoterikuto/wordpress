@@ -2,24 +2,51 @@
 <div class="page-header">
   <h2>おすすめ記事</h2>
 </div>
-<div class="pickup">
-  <?php $pickup_ids = array( 62, 12, 49 ); // ピックアップする記事の投稿idを指定する ?>
-    <?php foreach ( $pickup_ids as $id ) : ?>
-      <div class="pickup-item">
-        <div class="pickup-post-img">
-          <?php
-          if ( has_post_thumbnail( $id ) ) {
-            echo get_the_post_thumbnail( $id, 'large' );
-          } else {
-            echo '<img src="' . esc_url( get_template_directory_uri() ) . '/img/noimg.jpg" alt="">';
-          }
-          ?>
-        </div><!-- /pickup-item-img -->
-        <div class="pickup-post-title">
-          <h3><a href="<?php echo esc_url( get_permalink( $id ) ); ?>"><?php echo esc_html( get_the_title( $id ) ); ?></a></h3><!-- /pickup-item-title -->
-        </div><!-- /pickup-item-body -->
+<div id="posts" class="pickup">
+  <?php
+  $cat_posts = get_posts(array(
+    'post_type' => 'post', // 投稿タイプ
+    'category_name' => 'pickup', // スラッグ
+    'posts_per_page' => 6, // 表示件数
+    'orderby' => 'date', // 表示順の基準
+    'order' => 'DESC' // 昇順・降順
+  ));
+  global $post;
+  if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post); ?>
+
+      <div class="post">
+        <div class="post-image">
+          <a href="<?php the_permalink(); ?>">
+            <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail(); ?>
+            <?php else : ?>
+              <img src="<?= get_template_directory_uri(); ?>/img/noimg.jpg">
+            <?php endif; ?>
+          </a>
+        </div>
+        <div class="post-title">
+          <h3>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+          </h3>
+          <div class="post-meta">
+            <?php echo get_the_date(); ?>
+            <div class="post-category">
+              <?php the_category(' '); ?>
+            </div>
+          </div>
+          <div class="excerpt">
+            <?php echo mb_substr(get_the_excerpt(), 0, 80) . '...'; ?>
+
+          </div>
+        </div>
       </div>
-    <?php endforeach; ?>
+      <!-- ループおわり -->
+
+  <?php endforeach;
+  endif;
+  wp_reset_postdata(); ?>
+
+
 
 
 </div>

@@ -33,27 +33,29 @@ get_header(); ?>
           while (have_posts()) :
             the_post();
         ?>
-            <div class="post-container">
-              <div class="post">
-                <div class="post-title">
-                  <h3>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                  </h3>
-                  <div class="post-meta">
-                    <?php echo get_the_date(); ?>
-                    <div class="post-category">
-                      <?php the_category(' '); ?>
-                    </div>
+            <div class="post">
+              <div class="post-image">
+                <a href="<?php the_permalink(); ?>">
+                  <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail(); ?>
+                  <?php else : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimg.jpg">
+                  <?php endif; ?>
+                </a>
+              </div>
+              <div class="post-title">
+                <h3>
+                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h3>
+                <div class="post-meta">
+                  <?php echo get_the_date(); ?>
+                  <div class="post-category">
+                    <?php the_category(' '); ?>
                   </div>
                 </div>
-                <div class="post-image">
-                  <a href="<?php the_permalink(); ?>">
-                    <?php if (has_post_thumbnail()) : ?>
-                      <?php the_post_thumbnail(); ?>
-                    <?php else : ?>
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/noimg.jpg">
-                    <?php endif; ?>
-                  </a>
+                <div class="excerpt">
+                  <?php echo mb_substr(get_the_excerpt(), 0, 80) . '...'; ?>
+
                 </div>
               </div>
             </div>
