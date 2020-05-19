@@ -1,3 +1,11 @@
+/**
+* Template Name: startup_guide
+*
+* @package WordPress
+* @subpackage Twenty_Sixteen
+* @since Twenty Sixteen 1.0
+*/
+
 <?php get_header(); ?>
 <div class="contents">
   <main id="main">

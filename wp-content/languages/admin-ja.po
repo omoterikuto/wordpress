@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.4.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-28 01:31:29+0000\n"
+"PO-Revision-Date: 2020-05-19 02:02:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,6 +26,14 @@ msgstr "1"
 #: wp-admin/upgrade.php:153
 msgid "Continue"
 msgstr "続ける"
+
+#: wp-admin/includes/theme.php:304
+msgid "Wide Blocks"
+msgstr "ワイドブロック"
+
+#: wp-admin/includes/theme.php:281
+msgid "Block Editor Styles"
+msgstr "ブロックエディターのスタイル"
 
 #: wp-admin/about.php:163
 msgid "See progress as you process export and erasure requests through the privacy tools."
@@ -184,11 +192,11 @@ msgstr "最高の画像で、投稿やページをさらに活かす方法。"
 msgid "Every major release adds more to the block editor."
 msgstr "メジャーリリースのたびにブロックエディターにさらに機能を追加。"
 
-#: wp-admin/about.php:79
+#: wp-admin/about.php:46
 msgid "More ways to make your pages come alive. With easier ways to get it all done and looking better than ever&mdash;and boosts in speed you can feel."
 msgstr "ページを生き生きと見せる方法が増えました。より簡単な方法で、いまだかつてなく美しく、感じるスピードも向上します。"
 
-#: wp-admin/about.php:77
+#: wp-admin/about.php:44
 msgid "Say hello to more and better."
 msgstr "Hello, さらなる機能と向上"
 
@@ -1271,7 +1279,7 @@ msgstr "新しいバージョン %1$s が利用可能ですが、現在の PHP �
 msgid "This plugin failed to load properly and is paused during recovery mode."
 msgstr "このプラグインは正常なロードに失敗したため、リカバリーモード中に一時停止されました。"
 
-#: wp-admin/includes/theme.php:935
+#: wp-admin/includes/theme.php:937
 msgid "Go to the Themes screen"
 msgstr "テーマ画面へ移動"
 
@@ -2535,7 +2543,7 @@ msgstr "インストール不可"
 #. translators: %s: WordPress version.
 #. translators: %s: WordPress version
 #: wp-admin/includes/update.php:300 wp-admin/install.php:239
-#: wp-admin/update-core.php:82 wp-admin/upgrade.php:83 wp-admin/about.php:65
+#: wp-admin/update-core.php:82 wp-admin/upgrade.php:83 wp-admin/about.php:73
 msgid "https://wordpress.org/support/wordpress-version/version-%s/"
 msgstr "https://wordpress.org/support/wordpress-version/version-%s/"
 
@@ -2550,11 +2558,11 @@ msgctxt "plugin"
 msgid "Resume %s"
 msgstr "%s を再有効化"
 
-#: wp-admin/includes/theme.php:933
+#: wp-admin/includes/theme.php:935
 msgid "You can find more details and make changes on the Themes screen."
 msgstr "テーマ画面から詳細の確認と変更が可能です。"
 
-#: wp-admin/includes/theme.php:932
+#: wp-admin/includes/theme.php:934
 msgid "One or more themes failed to load properly."
 msgstr "テーマを正しく読み込めませんでした。"
 
@@ -2563,7 +2571,7 @@ msgstr "テーマを正しく読み込めませんでした。"
 msgid "Deleting a category does not delete the posts in that category. Instead, posts that were only assigned to the deleted category are set to the default category %s. The default category cannot be deleted."
 msgstr "カテゴリーを削除しても、カテゴリー内の投稿は削除されません。ただし、投稿に割り当て済みのカテゴリーが削除するカテゴリーのみの場合、デフォルトカテゴリー「%s」が割り当てられます。デフォルトカテゴリーは削除できません。"
 
-#: wp-admin/includes/theme.php:905
+#: wp-admin/includes/theme.php:907
 msgid "Could not resume the theme."
 msgstr "テーマを再有効化できませんでした。"
 
@@ -3929,7 +3937,7 @@ msgstr "不明"
 msgid "View posts by %s"
 msgstr "%s による投稿を表示"
 
-#: wp-admin/includes/class-wp-terms-list-table.php:542
+#: wp-admin/includes/class-wp-terms-list-table.php:543
 msgid "No description"
 msgstr "説明はありません"
 
@@ -4098,7 +4106,7 @@ msgid "Select one or more Theme features to filter by"
 msgstr "絞り込むテーマ機能を1つ以上選択"
 
 #. translators: %s: Number of ratings.
-#: wp-admin/includes/theme.php:746 wp-admin/theme-install.php:342
+#: wp-admin/includes/theme.php:748 wp-admin/theme-install.php:342
 msgid "(%s ratings)"
 msgstr "(%s件の評価)"
 
@@ -4269,7 +4277,7 @@ msgstr "%s を削除しました。"
 msgid "The search for installed plugins will search for terms in their name, description, or author."
 msgstr "インストール済みプラグインの検索ではプラグイン名・説明・作者名に含まれる語句を検索します。"
 
-#: wp-admin/includes/theme.php:284
+#: wp-admin/includes/theme.php:285
 msgid "Custom Logo"
 msgstr "カスタムロゴ"
 
@@ -4438,11 +4446,11 @@ msgstr "e コマース"
 msgid "Blog"
 msgstr "ブログ"
 
-#: wp-admin/includes/theme.php:288
+#: wp-admin/includes/theme.php:289
 msgid "Footer Widgets"
 msgstr "フッターウィジェット"
 
-#: wp-admin/includes/theme.php:296
+#: wp-admin/includes/theme.php:297
 msgid "Grid Layout"
 msgstr "グリッドレイアウト"
 
@@ -5040,7 +5048,7 @@ msgstr "https://ja.gravatar.com/"
 msgid "Profile Picture"
 msgstr "プロフィール写真"
 
-#: wp-admin/about.php:45 wp-admin/about.php:267
+#: wp-admin/about.php:53 wp-admin/about.php:267
 msgid "Maintenance and Security Releases"
 msgstr "メンテナンスとセキュリティのリリース"
 
@@ -5877,7 +5885,7 @@ msgstr "投稿ページ"
 msgid "You are currently editing the page that shows your latest posts."
 msgstr "最新の投稿を表示するページを編集中です。"
 
-#: wp-admin/includes/theme.php:710 wp-admin/themes.php:538
+#: wp-admin/includes/theme.php:712 wp-admin/themes.php:538
 msgid "Close details dialog"
 msgstr "詳細ダイアログを閉じる"
 
@@ -6196,7 +6204,7 @@ msgstr "名称"
 msgctxt "users"
 msgid "All <span class=\"count\">(%s)</span>"
 msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] "すべて: <span class=\"count\">(%s)</span>"
+msgstr[0] "すべて <span class=\"count\">(%s)</span>"
 
 #: wp-admin/includes/class-wp-screen.php:1130
 msgctxt "Welcome panel"
@@ -6608,7 +6616,7 @@ msgid "Accessibility Ready"
 msgstr "アクセシビリティ対応"
 
 #. translators: %s: Theme name.
-#: wp-admin/includes/theme.php:767 wp-admin/themes.php:578
+#: wp-admin/includes/theme.php:769 wp-admin/themes.php:578
 msgid "This is a child theme of %s."
 msgstr "これは %s の子テーマです。"
 
@@ -6701,15 +6709,15 @@ msgstr "以下のプラグインの更新に成功しました:"
 msgid "Add Widget"
 msgstr "ウィジェットを追加"
 
-#: wp-admin/includes/theme.php:709 wp-admin/themes.php:537
+#: wp-admin/includes/theme.php:711 wp-admin/themes.php:537
 msgid "Show next theme"
 msgstr "次のテーマを表示"
 
-#: wp-admin/includes/theme.php:708 wp-admin/themes.php:536
+#: wp-admin/includes/theme.php:710 wp-admin/themes.php:536
 msgid "Show previous theme"
 msgstr "前のテーマを表示"
 
-#: wp-admin/includes/theme.php:757 wp-admin/themes.php:568
+#: wp-admin/includes/theme.php:759 wp-admin/themes.php:568
 msgid "Update Available"
 msgstr "更新があります"
 
@@ -7207,7 +7215,7 @@ msgstr "リビジョン: %s"
 #. translators: %s: Audio track title.
 #: wp-admin/includes/media.php:338
 msgid "\"%s\"."
-msgstr "\"%s\""
+msgstr "\"%s\"。"
 
 #. translators: 1: Audio track title, 2: Artist name.
 #: wp-admin/includes/media.php:335
@@ -8537,14 +8545,14 @@ msgstr[0] "<strong>バージョン %1$s</strong> では%2$s個のバグを修正
 #. than one security issue.
 #. translators: 1: WordPress version number, 2: Plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:50 wp-admin/about.php:287
+#: wp-admin/about.php:58 wp-admin/about.php:287
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>バージョン %1$s</strong> はいくつかのセキュリティ問題に対応し、%2$s個のバグを修正しました。"
 
 #. translators: %s: HelpHub URL
 #. translators: %s: Documentation URL.
-#: wp-admin/about.php:62 wp-admin/about.php:293
+#: wp-admin/about.php:70 wp-admin/about.php:293
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "詳しくは<a href=\"%s\">リリースノート</a>をご覧ください。"
 
@@ -9052,7 +9060,7 @@ msgid "Plugins %s"
 msgstr "プラグイン %s"
 
 #. translators: %s: Plugin name.
-#: wp-admin/includes/theme.php:793
+#: wp-admin/includes/theme.php:795
 #: wp-admin/includes/class-wp-theme-install-list-table.php:483
 #: wp-admin/includes/deprecated.php:1384 wp-admin/theme-install.php:300
 #: wp-admin/theme-install.php:320
@@ -9066,7 +9074,7 @@ msgstr "ユーザー一覧"
 #: wp-admin/includes/class-wp-links-list-table.php:88
 #: wp-admin/includes/class-wp-links-list-table.php:334
 #: wp-admin/includes/class-wp-themes-list-table.php:233
-#: wp-admin/includes/theme.php:788
+#: wp-admin/includes/theme.php:790
 #: wp-admin/includes/class-wp-plugins-list-table.php:531
 #: wp-admin/includes/class-wp-plugins-list-table.php:699
 #: wp-admin/includes/class-wp-plugins-list-table.php:748
@@ -9171,7 +9179,7 @@ msgstr "ユーザーを追加しました。"
 #: wp-admin/includes/class-wp-debug-data.php:853
 #: wp-admin/includes/class-wp-debug-data.php:1036
 #: wp-admin/includes/class-wp-themes-list-table.php:263
-#: wp-admin/includes/theme.php:734
+#: wp-admin/includes/theme.php:736
 #: wp-admin/includes/class-wp-plugins-list-table.php:904
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:507
 #: wp-admin/includes/class-wp-theme-install-list-table.php:360
@@ -9295,19 +9303,19 @@ msgstr ""
 "アカウントを有効化するには、以下のリンクをクリックしてください。\n"
 "%%s"
 
-#: wp-admin/includes/theme.php:287
+#: wp-admin/includes/theme.php:288
 msgid "Featured Images"
 msgstr "アイキャッチ画像"
 
-#: wp-admin/includes/theme.php:290 wp-admin/includes/meta-boxes.php:480
+#: wp-admin/includes/theme.php:291 wp-admin/includes/meta-boxes.php:480
 msgid "Post Formats"
 msgstr "投稿フォーマット"
 
-#: wp-admin/includes/theme.php:289
+#: wp-admin/includes/theme.php:290
 msgid "Full Width Template"
 msgstr "全幅テンプレート"
 
-#: wp-admin/includes/theme.php:286
+#: wp-admin/includes/theme.php:287
 msgid "Featured Image Header"
 msgstr "アイキャッチ画像ヘッダー"
 
@@ -9327,7 +9335,7 @@ msgstr "無効なメニュー項目があります。確認または削除して
 
 #: wp-admin/edit-tags.php:440
 #: wp-admin/includes/class-wp-terms-list-table.php:182
-#: wp-admin/includes/class-wp-terms-list-table.php:645
+#: wp-admin/includes/class-wp-terms-list-table.php:646
 #: wp-admin/edit-tag-form.php:132
 msgctxt "term name"
 msgid "Name"
@@ -9480,7 +9488,7 @@ msgstr "アップロードした画像"
 msgid "<strong>Random:</strong> Show a different image on each page."
 msgstr "<strong>ランダム:</strong> それぞれのページで異なる画像を表示します。"
 
-#: wp-admin/includes/theme.php:295 wp-admin/includes/theme.php:330
+#: wp-admin/includes/theme.php:296 wp-admin/includes/theme.php:332
 #: wp-admin/includes/class-wp-screen.php:1200 wp-admin/index.php:68
 msgid "Layout"
 msgstr "レイアウト"
@@ -9760,7 +9768,7 @@ msgstr "更新プロセスを開始しています。サーバーによっては
 msgid "Apply Filters"
 msgstr "フィルターを適用"
 
-#: wp-admin/includes/theme.php:285
+#: wp-admin/includes/theme.php:286
 msgid "Editor Style"
 msgstr "エディタースタイル"
 
@@ -10641,7 +10649,7 @@ msgstr "%s の更新に失敗しました。"
 #. plugins being updated.
 #: wp-admin/includes/class-bulk-plugin-upgrader-skin.php:24
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr "プラグインの更新: %1$s (%2$d/%3$d)"
+msgstr "%1$s プラグインを更新中 (%2$d/%3$d)"
 
 #: wp-admin/includes/upgrade.php:100
 msgid "User already exists. Password inherited."
@@ -11055,7 +11063,7 @@ msgstr "プラグインのアップロード"
 #. translators: %s: Plugin name and version.
 #: wp-admin/update.php:128
 msgid "Installing Plugin: %s"
-msgstr "インストールしているプラグイン: %s"
+msgstr "プラグインをインストール中: %s"
 
 #: wp-admin/update.php:91
 msgid "Plugin failed to reactivate due to a fatal error."
@@ -11113,7 +11121,7 @@ msgstr ""
 "このテーマ '%s' を削除しようとしています。\n"
 " 'キャンセル' で中止、'OK' で削除します。"
 
-#: wp-admin/includes/theme.php:723 wp-admin/themes.php:551
+#: wp-admin/includes/theme.php:725 wp-admin/themes.php:551
 msgid "Current Theme"
 msgstr "現在のテーマ"
 
@@ -11129,7 +11137,7 @@ msgstr "編集するテーマを選択:"
 msgid "Edit Themes"
 msgstr "テーマの編集"
 
-#: wp-admin/includes/theme.php:777 wp-admin/themes.php:584
+#: wp-admin/includes/theme.php:779 wp-admin/themes.php:584
 msgid "Tags:"
 msgstr "タグ:"
 
@@ -11944,7 +11952,7 @@ msgid "Unable to locate WordPress theme directory."
 msgstr "WordPress テーマディレクトリが見つかりません。"
 
 #. translators: %s: Theme version.
-#: wp-admin/includes/theme.php:728 wp-admin/themes.php:556
+#: wp-admin/includes/theme.php:730 wp-admin/themes.php:556
 #: wp-admin/theme-install.php:352
 msgid "Version: %s"
 msgstr "バージョン: %s"
@@ -11961,47 +11969,47 @@ msgstr "テーマを検索"
 msgid "Holiday"
 msgstr "ホリデー"
 
-#: wp-admin/includes/theme.php:267 wp-admin/includes/theme.php:332
+#: wp-admin/includes/theme.php:267 wp-admin/includes/theme.php:334
 msgid "Subject"
 msgstr "題名"
 
-#: wp-admin/includes/theme.php:291
+#: wp-admin/includes/theme.php:292
 msgid "Sticky Post"
 msgstr "固定投稿"
 
-#: wp-admin/includes/theme.php:292
+#: wp-admin/includes/theme.php:293
 msgid "Theme Options"
 msgstr "テーマオプション"
 
-#: wp-admin/includes/theme.php:282
+#: wp-admin/includes/theme.php:283
 msgid "Custom Colors"
 msgstr "カスタムカラー"
 
-#: wp-admin/includes/theme.php:279 wp-admin/includes/theme.php:331
+#: wp-admin/includes/theme.php:279 wp-admin/includes/theme.php:333
 msgid "Features"
 msgstr "機能"
 
-#: wp-admin/includes/theme.php:302
+#: wp-admin/includes/theme.php:303
 msgid "Right Sidebar"
 msgstr "右サイドバー"
 
-#: wp-admin/includes/theme.php:301
+#: wp-admin/includes/theme.php:302
 msgid "Left Sidebar"
 msgstr "左サイドバー"
 
-#: wp-admin/includes/theme.php:300
+#: wp-admin/includes/theme.php:301
 msgid "Four Columns"
 msgstr "4列"
 
-#: wp-admin/includes/theme.php:299
+#: wp-admin/includes/theme.php:300
 msgid "Three Columns"
 msgstr "3列"
 
-#: wp-admin/includes/theme.php:298
+#: wp-admin/includes/theme.php:299
 msgid "Two Columns"
 msgstr "2列"
 
-#: wp-admin/includes/theme.php:297
+#: wp-admin/includes/theme.php:298
 msgid "One Column"
 msgstr "1列"
 
@@ -12183,7 +12191,7 @@ msgstr "タイトル"
 msgid "Quick&nbsp;Edit"
 msgstr "クイック編集"
 
-#: wp-admin/includes/class-wp-terms-list-table.php:642
+#: wp-admin/includes/class-wp-terms-list-table.php:643
 #: wp-admin/includes/class-wp-posts-list-table.php:1528
 msgid "Quick Edit"
 msgstr "クイック編集"
@@ -13683,7 +13691,7 @@ msgstr "画像処理エラー"
 msgid "Header updated. <a href=\"%s\">Visit your site</a> to see how it looks."
 msgstr "ヘッダーを更新しました。<a href=\"%s\">サイトを表示</a>して、確認してください。"
 
-#: wp-admin/includes/theme.php:283
+#: wp-admin/includes/theme.php:284
 #: wp-admin/includes/class-custom-image-header.php:475
 msgid "Custom Header"
 msgstr "カスタムヘッダー"
@@ -13704,7 +13712,7 @@ msgid "Background updated. <a href=\"%s\">Visit your site</a> to see how it look
 msgstr "背景を更新しました。<a href=\"%s\">サイトを表示</a>して確認してください。"
 
 #: wp-admin/includes/class-custom-background.php:226
-#: wp-admin/includes/theme.php:281
+#: wp-admin/includes/theme.php:282
 msgid "Custom Background"
 msgstr "カスタム背景"
 
