@@ -616,10 +616,6 @@ footer {
   .post-title h3 {
     font-size: 18px;
   }
-  .searchform {
-    width: 300px;
-    display: inline-block;
-  }
   .textwidget p {
     font-size: 14px;
   }
@@ -718,9 +714,6 @@ footer {
   .introduction div p {
     padding: 0px 10px;
     margin: 10px 0px 0px 0px;
-  }
-  .searchform {
-    width: 100%;
   }
   .submit-button {
     right: 10px;
